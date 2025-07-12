@@ -1,4 +1,3 @@
-using IdentityTemplate;
 using IdentityTemplate.Data;
 using IdentityTemplate.Services.Smtp;
 using Microsoft.AspNetCore.Identity;
@@ -34,7 +33,7 @@ try
 
     builder.Services.AddTransient<IEmailSender, SmtpSender>();
 
-    builder.ConfigureOptions();
+    builder.Services.Configure<SmtpOptions>(builder.Configuration.GetSection(SmtpOptions.Section));
 
     var app = builder.Build();
 
