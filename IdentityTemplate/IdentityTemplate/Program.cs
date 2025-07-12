@@ -1,5 +1,8 @@
+using IdentityTemplate;
 using IdentityTemplate.Data;
+using IdentityTemplate.Services.Smtp;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Events;
@@ -28,6 +31,10 @@ try
     builder.Services.AddRazorPages();
 
     builder.Services.AddControllersWithViews();
+
+    builder.Services.AddTransient<IEmailSender, SmtpSender>();
+
+    builder.ConfigureOptions();
 
     var app = builder.Build();
 
