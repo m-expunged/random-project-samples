@@ -1,5 +1,6 @@
 using GuestManagement.Data;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Events;
 
