@@ -24,8 +24,7 @@ try
 
     builder.Services.AddSqlite<ApplicationDbContext>(builder.Configuration.GetConnectionString("Default"));
 
-    builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
-        .AddEntityFrameworkStores<ApplicationDbContext>();
+    builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<ApplicationDbContext>();
 
     builder.Services.AddRazorPages();
 
