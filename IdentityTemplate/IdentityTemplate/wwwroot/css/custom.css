@@ -1,7 +1,11 @@
 ﻿:root {
     --custom-primary: #73b231;
-    --custom-primary-light: #81ba46;
-    --custom-primary-lighter: #8fc15a;
+    --custom-primary-light: #9ac768;
+    --custom-primary-light-2: #bcda9a;
+    --custom-primary-light-3: #deeccc;
+    --custom-primary-dark: #588429;
+    --custom-primary-dark-2: #3c561f;
+    --custom-primary-dark-3: #3c561f;
     --custom-primary-shadow-dark: 0 0 0 0.25rem rgba(98, 151, 42, 0.5);
     --custom-primary-shadow-light: 0 0 0 0.25rem rgba(115, 178, 49, 0.5);
 }
@@ -49,13 +53,13 @@
 }
 
 .alert-custom {
-    color: #456b1d;
-    background-color: #e3f0d6;
-    border-color: #d5e8c1;
+    color: var(--custom-primary-dark);
+    background-color: var(--custom-primary-light-3);
+    border-color: var(--custom-primary-light-2);
 }
 
     .alert-custom .alert-link {
-        color: #375617;
+        color: var(--custom-primary-dark);
     }
 
 .bg-custom {
@@ -75,23 +79,23 @@
 }
 
     .link-custom:hover, .link-custom:focus {
-        color: var(--custom-primary-lighter);
+        color: var(--custom-primary-light-2);
     }
 
 .list-group-item-custom {
-    color: #456b1d;
-    background-color: #e3f0d6;
+    color: var(--custom-primary-dark);
+    background-color: var(--custom-primary-light-2);
 }
 
     .list-group-item-custom.list-group-item-action:hover, .list-group-item-custom.list-group-item-action:focus {
-        color: #456b1d;
-        background-color: #ccd8c1;
+        color: var(--custom-primary-dark);
+        background-color: var(--custom-primary-light-2);
     }
 
     .list-group-item-custom.list-group-item-action.active {
         color: #fff;
-        background-color: #456b1d;
-        border-color: #456b1d;
+        background-color: var(--custom-primary-dark);
+        border-color: var(--custom-primary-dark);
     }
 
 .active-shadow-custom {
@@ -105,6 +109,25 @@
         box-shadow: var(--custom-primary-shadow-dark);
     }
 
+.btn-rounded-active-custom {
+    transition: none;
+    color: var(--custom-primary);
+}
+
+    .btn-check:focus + .btn-rounded-active-custom, .btn-rounded-active-custom:focus {
+        box-shadow: none;
+    }
+
+    .btn-check:checked + .btn-rounded-active-custom :focus, .btn-check:active + .btn-rounded-active-custom :focus, .btn-rounded-active-custom :active:focus, .btn-rounded-active-custom .active:focus, .show > .btn-rounded-active-custom .dropdown-toggle:focus {
+        box-shadow: none;
+    }
+
+    .btn-rounded-active-custom:hover {
+        color: var(--custom-primary);
+        border-radius: 9999px;
+        background-color: var(--custom-primary-light-3);
+    }
+
 .btn-custom {
     color: #000000;
     background-color: var(--custom-primary);
@@ -113,20 +136,20 @@
 
     .btn-custom:hover {
         color: #000000;
-        background-color: #88be50;
+        background-color: var(--custom-primary-light);
         border-color: var(--custom-primary-light);
     }
 
     .btn-check:focus + .btn-custom, .btn-custom:focus {
         color: #000000;
-        background-color: #88be50;
+        background-color: var(--custom-primary-light);
         border-color: var(--custom-primary-light);
         box-shadow: var(--custom-primary-shadow-dark);
     }
 
     .btn-check:checked + .btn-custom, .btn-check:active + .btn-custom, .btn-custom:active, .btn-custom.active, .show > .btn-custom.dropdown-toggle {
         color: #000000;
-        background-color: var(--custom-primary-lighter);
+        background-color: var(--custom-primary-light-2);
         border-color: var(--custom-primary-light);
     }
 
